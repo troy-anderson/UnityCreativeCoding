@@ -22,13 +22,18 @@ public class sketch : MonoBehaviour {
             float z = 0.0f;
 
             var newCube = (GameObject)Instantiate(myPrefab, new Vector3(x, y, z), Quaternion.identity);
+            newCube.GetComponent<Renderer>().material.color = Color.blue;
             newCube.GetComponent<cubeScript>().SetSize(.5f * (1.0f - perc));
             newCube.GetComponent<cubeScript>().rotateSpeed = .45f + perc*4.0f;
+
+            
 
         }
 	}
 	
 	void Update () {
+
+
 		
 	}
 }
